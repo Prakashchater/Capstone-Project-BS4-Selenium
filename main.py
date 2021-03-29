@@ -3,11 +3,11 @@ from selenium import webdriver
 import time
 import requests
 
-google_sheet_url = "https://docs.google.com/forms/d/e/1FAIpQLSfjLBuUuxo6nin3LKXhQ81YWrmeWbRsHlQimF52Pa5jrk5BtA/viewform?usp=sf_link"
+google_sheet_url = "YOUR GOOGLE SHEET LINK"
 
 header = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
-    "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+    "User-Agent": YOUR-USER-AGENT,
+    "Accept-Language": "LANGUAGES"
 }
 
 response = requests.get(
@@ -38,7 +38,7 @@ for link in all_links:
 # driver.get(url=google_sheet_url)
 # time.sleep(2)
 
-chrome_driver_path = "C:\Chrome driver\chromedriver.exe"
+chrome_driver_path = "YOUR CHROME PATH"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
 
 for i in range(len(all_links)):
